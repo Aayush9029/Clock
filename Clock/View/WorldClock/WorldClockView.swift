@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WorldClockView: View {
+    @StateObject var worldClockVC = WorldClockViewController()
     let columns = [
         GridItem(.adaptive(minimum: 140))
     ]
@@ -24,6 +25,20 @@ struct WorldClockView: View {
                 .padding()
             }
             Spacer()
+        }
+        
+    
+        .sheet(isPresented: $worldClockVC.addTimezonePresented){ AddNewTimeZone()
+                .environmentObject(worldClockVC)
+        }
+        .toolbar {
+
+            Button {
+                worldClockVC.addTimezonePresented.toggle()
+            } label: {
+                Label("Add timezone", systemImage: "plus")
+            }
+
         }
     }
 }

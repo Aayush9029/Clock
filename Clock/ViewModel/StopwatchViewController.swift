@@ -51,4 +51,8 @@ class StopwatchViewController: ObservableObject{
         lappedValues.append(lap)
         lapIndex += 1
     }
+    
+    func clearLappedValues(){
+        lappedValues = []
+    }
 }

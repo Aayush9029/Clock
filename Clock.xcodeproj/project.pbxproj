@@ -10,6 +10,11 @@
 		C2956D47271B128C0052BDE6 /* WorldClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2956D46271B128C0052BDE6 /* WorldClockView.swift */; };
 		C2956D4B271B12F30052BDE6 /* RoundedClocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2956D4A271B12F30052BDE6 /* RoundedClocks.swift */; };
 		C2956DE1271B1A870052BDE6 /* SwiftClockUI in Frameworks */ = {isa = PBXBuildFile; productRef = C2956DE0271B1A870052BDE6 /* SwiftClockUI */; };
+		C2956DE5271B1F7F0052BDE6 /* WorldClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2956DE4271B1F7F0052BDE6 /* WorldClockViewController.swift */; };
+		C2956DE7271B21690052BDE6 /* TimezoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2956DE6271B21690052BDE6 /* TimezoneModel.swift */; };
+		C2956DE9271B25590052BDE6 /* AddNewTimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2956DE8271B25590052BDE6 /* AddNewTimeZone.swift */; };
+		C2956DEB271B2CFC0052BDE6 /* timezones.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2956DEA271B2CFC0052BDE6 /* timezones.plist */; };
+		C2956DED271B2D770052BDE6 /* CityNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2956DEC271B2D770052BDE6 /* CityNameView.swift */; };
 		C2AB2B77271A365600B7235A /* ClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB2B76271A365600B7235A /* ClockApp.swift */; };
 		C2AB2B79271A365600B7235A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB2B78271A365600B7235A /* ContentView.swift */; };
 		C2AB2B7B271A365700B7235A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2AB2B7A271A365700B7235A /* Assets.xcassets */; };
@@ -30,6 +35,11 @@
 /* Begin PBXFileReference section */
 		C2956D46271B128C0052BDE6 /* WorldClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockView.swift; sourceTree = "<group>"; };
 		C2956D4A271B12F30052BDE6 /* RoundedClocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedClocks.swift; sourceTree = "<group>"; };
+		C2956DE4271B1F7F0052BDE6 /* WorldClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockViewController.swift; sourceTree = "<group>"; };
+		C2956DE6271B21690052BDE6 /* TimezoneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezoneModel.swift; sourceTree = "<group>"; };
+		C2956DE8271B25590052BDE6 /* AddNewTimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTimeZone.swift; sourceTree = "<group>"; };
+		C2956DEA271B2CFC0052BDE6 /* timezones.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = timezones.plist; sourceTree = "<group>"; };
+		C2956DEC271B2D770052BDE6 /* CityNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityNameView.swift; sourceTree = "<group>"; };
 		C2AB2B73271A365600B7235A /* Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2AB2B76271A365600B7235A /* ClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockApp.swift; sourceTree = "<group>"; };
 		C2AB2B78271A365600B7235A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,7 +74,9 @@
 		C2956D45271B12780052BDE6 /* WorldClock */ = {
 			isa = PBXGroup;
 			children = (
+				C2956DEA271B2CFC0052BDE6 /* timezones.plist */,
 				C2956D46271B128C0052BDE6 /* WorldClockView.swift */,
+				C2956DE8271B25590052BDE6 /* AddNewTimeZone.swift */,
 				C2956D49271B12C20052BDE6 /* SubViews */,
 			);
 			path = WorldClock;
@@ -84,6 +96,7 @@
 			children = (
 				C2956D4A271B12F30052BDE6 /* RoundedClocks.swift */,
 				C2AB2B88271A369A00B7235A /* CurrentDateTimeHeader.swift */,
+				C2956DEC271B2D770052BDE6 /* CityNameView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -132,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				C2AB2B97271A50A700B7235A /* LapModel.swift */,
+				C2956DE6271B21690052BDE6 /* TimezoneModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +155,7 @@
 			children = (
 				C2AB2B95271A4CD500B7235A /* StopwatchViewController.swift */,
 				C2AB2B9E271A608900B7235A /* TimerViewController.swift */,
+				C2956DE4271B1F7F0052BDE6 /* WorldClockViewController.swift */,
 				C2AB2B8A271A390B00B7235A /* Time.swift */,
 			);
 			path = ViewModel;
@@ -247,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2AB2B7E271A365700B7235A /* Preview Assets.xcassets in Resources */,
+				C2956DEB271B2CFC0052BDE6 /* timezones.plist in Resources */,
 				C2AB2B7B271A365700B7235A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +275,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2AB2B79271A365600B7235A /* ContentView.swift in Sources */,
+				C2956DE7271B21690052BDE6 /* TimezoneModel.swift in Sources */,
 				C2AB2B98271A50A700B7235A /* LapModel.swift in Sources */,
 				C2956D4B271B12F30052BDE6 /* RoundedClocks.swift in Sources */,
+				C2956DED271B2D770052BDE6 /* CityNameView.swift in Sources */,
 				C2AB2B94271A4C4700B7235A /* StopWatchButton.swift in Sources */,
 				C2AB2B89271A369A00B7235A /* CurrentDateTimeHeader.swift in Sources */,
 				C2AB2B9F271A608900B7235A /* TimerViewController.swift in Sources */,
@@ -270,6 +288,8 @@
 				C2AB2B8B271A390B00B7235A /* Time.swift in Sources */,
 				C2AB2B8F271A461200B7235A /* SidebarView.swift in Sources */,
 				C2AB2B8D271A39BA00B7235A /* Date+Extensions.swift in Sources */,
+				C2956DE9271B25590052BDE6 /* AddNewTimeZone.swift in Sources */,
+				C2956DE5271B1F7F0052BDE6 /* WorldClockViewController.swift in Sources */,
 				C2AB2B92271A496600B7235A /* StopwatchView.swift in Sources */,
 				C2956D47271B128C0052BDE6 /* WorldClockView.swift in Sources */,
 				C2AB2B77271A365600B7235A /* ClockApp.swift in Sources */,

@@ -63,6 +63,13 @@ struct StopwatchView: View {
                 .padding(.horizontal)
             }
         }
+        .toolbar(content: {
+            Button {
+                stopwatchVC.clearLappedValues()
+            } label: {
+                Label("Clear Lap Times", systemImage: "trash")
+            }
+        })
         .navigationTitle("Stopwatch")
         .frame(minWidth: 300)
     }

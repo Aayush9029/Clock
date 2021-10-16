@@ -32,17 +32,6 @@ struct TimerView: View {
                     self.timerManager.timerMode == .running ? self.timerManager.pause() : self.timerManager.start()
                 })
             
-            if timerManager.timerMode == .paused {
-                Image(systemName: "gobackward")
-                    .foregroundColor(.green)
-                    .font(.largeTitle)
-                    .padding(5)
-                    .onTapGesture(perform: {
-                        self.timerManager.reset()
-                    })
-                    .padding(.top)
-
-            }
             if timerManager.timerMode == .initial {
                 Picker(selection: $selectedPickerIndex, label: Text("")) {
                     ForEach(0 ..< availableMinutes.count) {
@@ -52,6 +41,14 @@ struct TimerView: View {
                 .labelsHidden()
             }
             Spacer()
+        }        .toolbar {
+            
+            Button {
+                self.timerManager.reset()
+            } label: {
+                Label("Reset", systemImage: "gobackward")
+            }
+
         }
         .navigationTitle("Timer")
     }
