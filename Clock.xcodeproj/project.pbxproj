@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2956D47271B128C0052BDE6 /* WorldClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2956D46271B128C0052BDE6 /* WorldClockView.swift */; };
+		C2956D4B271B12F30052BDE6 /* RoundedClocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2956D4A271B12F30052BDE6 /* RoundedClocks.swift */; };
+		C2956DE1271B1A870052BDE6 /* SwiftClockUI in Frameworks */ = {isa = PBXBuildFile; productRef = C2956DE0271B1A870052BDE6 /* SwiftClockUI */; };
 		C2AB2B77271A365600B7235A /* ClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB2B76271A365600B7235A /* ClockApp.swift */; };
 		C2AB2B79271A365600B7235A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB2B78271A365600B7235A /* ContentView.swift */; };
 		C2AB2B7B271A365700B7235A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2AB2B7A271A365700B7235A /* Assets.xcassets */; };
@@ -25,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C2956D46271B128C0052BDE6 /* WorldClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockView.swift; sourceTree = "<group>"; };
+		C2956D4A271B12F30052BDE6 /* RoundedClocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedClocks.swift; sourceTree = "<group>"; };
 		C2AB2B73271A365600B7235A /* Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2AB2B76271A365600B7235A /* ClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockApp.swift; sourceTree = "<group>"; };
 		C2AB2B78271A365600B7235A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,12 +54,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2956DE1271B1A870052BDE6 /* SwiftClockUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2956D45271B12780052BDE6 /* WorldClock */ = {
+			isa = PBXGroup;
+			children = (
+				C2956D46271B128C0052BDE6 /* WorldClockView.swift */,
+				C2956D49271B12C20052BDE6 /* SubViews */,
+			);
+			path = WorldClock;
+			sourceTree = "<group>";
+		};
+		C2956D48271B12B80052BDE6 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				C2AB2B93271A4C4700B7235A /* StopWatchButton.swift */,
+				C2AB2B9A271A513200B7235A /* LaplineView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		C2956D49271B12C20052BDE6 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				C2956D4A271B12F30052BDE6 /* RoundedClocks.swift */,
+				C2AB2B88271A369A00B7235A /* CurrentDateTimeHeader.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		C2AB2B6A271A365600B7235A = {
 			isa = PBXGroup;
 			children = (
@@ -117,8 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				C2AB2B8E271A461200B7235A /* SidebarView.swift */,
+				C2956D45271B12780052BDE6 /* WorldClock */,
 				C2AB2BA0271A610400B7235A /* Timer */,
-				C2AB2B88271A369A00B7235A /* CurrentDateTimeHeader.swift */,
 				C2AB2B90271A495000B7235A /* Stopwatch */,
 			);
 			path = View;
@@ -128,8 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				C2AB2B91271A496600B7235A /* StopwatchView.swift */,
-				C2AB2B9A271A513200B7235A /* LaplineView.swift */,
-				C2AB2B93271A4C4700B7235A /* StopWatchButton.swift */,
+				C2956D48271B12B80052BDE6 /* SubViews */,
 			);
 			path = Stopwatch;
 			sourceTree = "<group>";
@@ -166,6 +198,9 @@
 			dependencies = (
 			);
 			name = Clock;
+			packageProductDependencies = (
+				C2956DE0271B1A870052BDE6 /* SwiftClockUI */,
+			);
 			productName = Clock;
 			productReference = C2AB2B73271A365600B7235A /* Clock.app */;
 			productType = "com.apple.product-type.application";
@@ -194,6 +229,9 @@
 				Base,
 			);
 			mainGroup = C2AB2B6A271A365600B7235A;
+			packageReferences = (
+				C2956DDF271B1A870052BDE6 /* XCRemoteSwiftPackageReference "SwiftClockUI" */,
+			);
 			productRefGroup = C2AB2B74271A365600B7235A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -222,6 +260,7 @@
 			files = (
 				C2AB2B79271A365600B7235A /* ContentView.swift in Sources */,
 				C2AB2B98271A50A700B7235A /* LapModel.swift in Sources */,
+				C2956D4B271B12F30052BDE6 /* RoundedClocks.swift in Sources */,
 				C2AB2B94271A4C4700B7235A /* StopWatchButton.swift in Sources */,
 				C2AB2B89271A369A00B7235A /* CurrentDateTimeHeader.swift in Sources */,
 				C2AB2B9F271A608900B7235A /* TimerViewController.swift in Sources */,
@@ -232,6 +271,7 @@
 				C2AB2B8F271A461200B7235A /* SidebarView.swift in Sources */,
 				C2AB2B8D271A39BA00B7235A /* Date+Extensions.swift in Sources */,
 				C2AB2B92271A496600B7235A /* StopwatchView.swift in Sources */,
+				C2956D47271B128C0052BDE6 /* WorldClockView.swift in Sources */,
 				C2AB2B77271A365600B7235A /* ClockApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +472,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C2956DDF271B1A870052BDE6 /* XCRemoteSwiftPackageReference "SwiftClockUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/renaudjenny/SwiftClockUI.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C2956DE0271B1A870052BDE6 /* SwiftClockUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2956DDF271B1A870052BDE6 /* XCRemoteSwiftPackageReference "SwiftClockUI" */;
+			productName = SwiftClockUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C2AB2B6B271A365600B7235A /* Project object */;
 }

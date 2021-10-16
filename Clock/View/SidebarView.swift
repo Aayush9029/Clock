@@ -19,7 +19,7 @@ struct SidebarView: View {
                                Label("Timer", systemImage: "timer").accentColor(.pink)
                            })
                 NavigationLink(
-                           destination: CurrentDateTimeHeader(),
+                    destination: WorldClockView(),
                            tag: Pages.worldclock,
                            selection: $selectedPage,
                            label: {

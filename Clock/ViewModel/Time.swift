@@ -11,8 +11,9 @@ import Foundation
 class Time: ObservableObject {
     @Published var hourMinute: String = "10:10"
     @Published var amPm: AmPm = .pm
+    var timezone: String = "America/Ottawa"
     var city: String = "Ottawa"
-    
+
     enum AmPm: String{
         case am = "am"
         case pm = "pm"
@@ -21,6 +22,7 @@ class Time: ObservableObject {
     init(){
         refreshHourMinute()
         refreshAmPm()
+        setTz()
         setCity()
     }
     
@@ -45,13 +47,16 @@ class Time: ObservableObject {
         return Date().getFormattedDate(format: "MM/dd/yyyy")
     }
     
+    func setTz(){
+        timezone = TimeZone.current.identifier
+    }
+    
     func setCity(){
-        let tz = TimeZone.current.identifier
-        if tz.split(separator: "/").count == 2{
-            let splitCity = String(tz.split(separator: "/")[1])
+        if timezone.split(separator: "/").count == 2{
+            let splitCity = String(timezone.split(separator: "/")[1])
             city = splitCity
         }else{
-            city = tz
+            city = timezone
         }
     }
 }

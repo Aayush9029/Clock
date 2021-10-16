@@ -20,6 +20,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             SidebarView(selectedPage: $selection)
+            StopwatchView()
         }
     }
 }

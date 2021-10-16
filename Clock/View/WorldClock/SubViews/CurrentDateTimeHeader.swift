@@ -12,12 +12,6 @@ struct CurrentDateTimeHeader: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         Group {
-            ZStack {
-//                Image("nightBanner")
-//                    .resizable()
-//                    .scaledToFit()
-//                    .blur(radius: )
-//                    .clipped()
                 HStack {
                     VStack(alignment: .leading){
                         Text(time.city)
@@ -35,9 +29,7 @@ struct CurrentDateTimeHeader: View {
                         time.refreshHourMinute()
                     }
                 }.padding()
-            }
-        }
-        
+            }        
     }
 }
 
