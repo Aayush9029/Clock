@@ -7,10 +7,20 @@
 
 import SwiftUI
 
+enum Pages: String{
+    case worldclock = "World Clock"
+    case stopwatch  = "Stopwatch"
+    case timer      = "Timer"
+}
+
 struct ContentView: View {
+    
+    @State var selection: Pages? = .stopwatch
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            SidebarView(selectedPage: $selection)
+        }
     }
 }
 
