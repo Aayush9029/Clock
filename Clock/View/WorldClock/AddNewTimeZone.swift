@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct AddNewTimeZone: View {
-//    I don't like how this code is organized
-//    TODO: FIX THIS MESSY CODE
+    //    I don't like how this code is organized
+    //    TODO: FIX THIS MESSY CODE
     @EnvironmentObject var wordlClockVC: WorldClockViewController
+    
     @State private var pickedTimeZone: TimezoneModel = WorldClockViewController().timeZones.first!
+    
     @State var isBackHoverd: Bool = false
+    
     let columns = [
         GridItem(.adaptive(minimum: 180))
     ]
+    
     var body: some View {
         VStack{
             HStack{
